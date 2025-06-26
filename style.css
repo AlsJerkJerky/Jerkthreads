@@ -6,8 +6,12 @@
   --card-bg:#111;
 }
 
-*{box-sizing:border-box;margin:0;padding:0;font-family:'Inter',Arial,Helvetica,sans-serif;}
-
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:'Inter',Arial,Helvetica,sans-serif;
+}
 body{
   background:var(--bg);
   color:var(--text);
@@ -15,105 +19,104 @@ body{
   overflow-x:hidden;
 }
 
-/* HERO SECTION */
-header{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;          /* fills one viewport height */
+/* HERO */
+.hero-section{
+  width:100%;
+  height:100vh;
   position:relative;
   overflow:hidden;
 }
-
-header img{
-  max-width:100%;
-  max-height:100%;
-  width:auto;
-  height:auto;
-  object-fit:contain;    /* show full hero image without cropping */
-  display:block;
+.hero-section img{
+  width:100vw;
+  height:100vh;
+  object-fit:cover;
 }
-
-/* CTA BUTTON */
-.cta{
+.shop-btn{
   position:absolute;
-  bottom:30px;
-  left:65%;              /* slightly right so 'Shop Now' shows fully on desktop */
-  transform:translateX(-50%);
-}
-
-.btn{
+  bottom:40px;
+  right:5%;
   background:var(--primary);
   color:#000;
   padding:16px 36px;
-  border-radius:8px;
   font-weight:700;
+  border-radius:8px;
   text-decoration:none;
-  display:inline-block;
   box-shadow:0 4px 8px rgba(0,0,0,.4);
-  transition:transform .2s, box-shadow .2s;
 }
-.btn:hover{transform:scale(1.05);box-shadow:0 6px 12px rgba(0,0,0,.55);}
+.shop-btn:hover{
+  transform:scale(1.05);
+}
 
-/* PRODUCT GRID */
-.products{
+.contact-info{
+  position:absolute;
+  bottom:20px;
+  left:5%;
+  text-align:left;
+  font-size:1rem;
+}
+.contact-info a{
+  color:var(--primary);
+  text-decoration:none;
+}
+
+/* SHOP PAGE */
+.shop-section{
   max-width:1200px;
-  margin:60px auto;
+  margin:0 auto;
+  padding:40px 20px;
+}
+.shirt-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:40px;
-  padding:0 20px;
 }
-.card{
-  background:var(--card-bg);
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:0 4px 12px rgba(0,0,0,.45);
-  transition:transform .2s;
-}
-.card:hover{transform:translateY(-4px);}
-.card img{
+.shirt-card img{
   width:100%;
-  object-fit:contain;    /* ensure full image visible */
+  border-radius:12px;
   background:#000;
+  object-fit:contain;
 }
-.card-content{padding:20px;}
-.card h3{font-size:1.25rem;margin-bottom:4px;}
-.price{color:var(--primary);font-size:1.1rem;font-weight:700;margin-bottom:8px;}
-
-footer{
-  background:#111;
-  padding:40px 20px;
-  margin-top:60px;
-  line-height:1.6;
-  font-size:.9rem;
+.shirt-card p{
+  margin-top:12px;
+  font-size:1.1rem;
+  color:var(--primary);
+  font-weight:700;
 }
-footer a{color:var(--primary);text-decoration:none;}
 
-/* MOBILE */
+.back-link{
+  color:var(--primary);
+  text-decoration:none;
+  display:inline-block;
+  margin-bottom:20px;
+}
+
+/* Mobile */
 @media(max-width:600px){
-  header{
-    height:auto;         /* let hero auto height */
-    padding-bottom:20px;
-  }
-  header img{
-    width:100%;
+  .hero-section{
     height:auto;
   }
-  .cta{
-    position:static;
-    margin:20px auto 0;
-    transform:none;      /* remove translate for center align */
+  .hero-section img{
+    height:auto;
+    object-fit:contain;
   }
-  .btn{
-    font-size:16px;
+  .shop-btn{
+    left:50%;
+    transform:translateX(-50%);
+    right:auto;
+    bottom:20px;
     padding:12px 24px;
   }
-  .products{
-    grid-template-columns:1fr;
-    padding:0 10px;
-    gap:24px;
-    margin:40px 0;
+  .contact-info{
+    position:static;
+    margin-top:10px;
+    font-size:.9rem;
+    text-align:center;
   }
-  .card-content{padding:16px;}
+  .shirt-grid{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  .shirt-card{
+    width:100%;
+  }
 }
