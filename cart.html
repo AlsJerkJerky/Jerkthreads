@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - Jerk Threads</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    const products = [{"slug": "cat", "img": "cat_naughty.png", "title": "Naughty Bombay Cats", "price": 25.99}, {"slug": "moon", "img": "moon_coming_soon.png", "title": "Moon Coming Soon", "price": 24.99}, {"slug": "hodl", "img": "keep_calm_hodl_xrp.png", "title": "Keep Calm HODL XRP", "price": 24.99}, {"slug": "certified", "img": "certified_jerk.png", "title": "Certified Jerk", "price": 24.99}, {"slug": "iso", "img": "iso_gang.png", "title": "ISO Gang", "price": 24.99}, {"slug": "dont", "img": "dont_let_this_be_you.png", "title": "Don't Let This Be You", "price": 29.99}, {"slug": "notkeys", "img": "not_your_keys.png", "title": "Not Your Keys", "price": 29.99}];
+    function init(){
+      const params = new URLSearchParams(window.location.search);
+      const slug = params.get('slug');
+      const item = products.find(p=>p.slug===slug);
+      if(!item){document.getElementById('cart').innerHTML='Item not found';return;}
+      document.getElementById('cart').innerHTML = `
+        <h2>${item.title}</h2>
+        <img src='assets/${item.img}' style='max-width:300px;border-radius:8px;'>
+        <p style='font-size:1.2rem;margin:10px 0;'>Price: $${item.price.toFixed(2)}</p>
+        <a class='btn' href='https://www.paypal.com/paypalme/jerkthreads/${item.price}' target='_blank'>Pay with PayPal</a>
+      `;
+    }
+  </script>
+</head>
+<body onload="init()">
+  <nav><a href="shop.html" class="back-home">← Back to Shop</a></nav>
+  <div id="cart" style="padding:40px;"></div>
+</body>
+</html>
