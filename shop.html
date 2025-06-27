@@ -1,68 +1,75 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shop - Jerk Threads</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <nav><a href="index.html" class="back-home">← Home</a></nav>
-  <main class="products">
+  <a href="index.html" class="back-home">← Home</a>
+  <section class="grid">
     
-    <div class="card">
-      <img src="assets/cat_naughty.png" alt="Naughty Bombay Cats">
-      <h3>Naughty Bombay Cats</h3>
-      <p class="price">$25.99</p>
-      <a href="cart.html?slug=cat" class="btn">Add to Cart</a>
-    </div>
+      <div class="card">
+        <img src="assets/moon_coming_soon.png" alt="Moon Coming Soon">
+        <h3>Moon Coming Soon</h3>
+        <p class="price">$29.99</p>
+        <div id="HOSTED_ID_MOON"></div>
+      </div>
     
-    <div class="card">
-      <img src="assets/moon_coming_soon.png" alt="Moon Coming Soon">
-      <h3>Moon Coming Soon</h3>
-      <p class="price">$24.99</p>
-      <a href="cart.html?slug=moon" class="btn">Add to Cart</a>
-    </div>
+      <div class="card">
+        <img src="assets/keep_calm_hodl_xrp.png" alt="Keep Calm HODL XRP">
+        <h3>Keep Calm HODL XRP</h3>
+        <p class="price">$29.99</p>
+        <div id="HOSTED_ID_HODL"></div>
+      </div>
     
-    <div class="card">
-      <img src="assets/keep_calm_hodl_xrp.png" alt="Keep Calm HODL XRP">
-      <h3>Keep Calm HODL XRP</h3>
-      <p class="price">$24.99</p>
-      <a href="cart.html?slug=hodl" class="btn">Add to Cart</a>
-    </div>
+      <div class="card">
+        <img src="assets/certified_jerk.png" alt="Certified Jerk">
+        <h3>Certified Jerk</h3>
+        <p class="price">$29.99</p>
+        <div id="HOSTED_ID_JERK"></div>
+      </div>
     
-    <div class="card">
-      <img src="assets/certified_jerk.png" alt="Certified Jerk">
-      <h3>Certified Jerk</h3>
-      <p class="price">$24.99</p>
-      <a href="cart.html?slug=certified" class="btn">Add to Cart</a>
-    </div>
+      <div class="card">
+        <img src="assets/decentralize_everything.png" alt="Decentralize Everything">
+        <h3>Decentralize Everything</h3>
+        <p class="price">$29.99</p>
+        <div id="HOSTED_ID_DECENT"></div>
+      </div>
     
-    <div class="card">
-      <img src="assets/iso_gang.png" alt="ISO Gang">
-      <h3>ISO Gang</h3>
-      <p class="price">$24.99</p>
-      <a href="cart.html?slug=iso" class="btn">Add to Cart</a>
-    </div>
+      <div class="card">
+        <img src="assets/iso_gang.png" alt="ISO Gang">
+        <h3>ISO Gang</h3>
+        <p class="price">$29.99</p>
+        <div id="HOSTED_ID_ISO"></div>
+      </div>
     
-    <div class="card">
-      <img src="assets/dont_let_this_be_you.png" alt="Don't Let This Be You">
-      <h3>Don't Let This Be You</h3>
-      <p class="price">$29.99</p>
-      <a href="cart.html?slug=dont" class="btn">Add to Cart</a>
-    </div>
+      <div class="card">
+        <img src="assets/dont_let_this_be_you.png" alt="Don't Let This Be You">
+        <h3>Don't Let This Be You</h3>
+        <p class="price">$29.99</p>
+        <div id="HOSTED_ID_LOCK"></div>
+      </div>
     
-    <div class="card">
-      <img src="assets/not_your_keys.png" alt="Not Your Keys">
-      <h3>Not Your Keys</h3>
-      <p class="price">$29.99</p>
-      <a href="cart.html?slug=notkeys" class="btn">Add to Cart</a>
-    </div>
+      <div class="card">
+        <img src="assets/not_your_keys.png" alt="Not Your Keys, Not Your Coins">
+        <h3>Not Your Keys, Not Your Coins</h3>
+        <p class="price">$29.99</p>
+        <div id="HOSTED_ID_KEYS"></div>
+      </div>
     
-  </main>
-  <footer>
-    <a href="https://instagram.com/jerkthreads" target="_blank">@jerkthreads</a>
-  </footer>
+  </section>
+
+  <!-- PayPal SDK -->
+  <script src="https://www.paypal.com/sdk/js?client-id=BAAz3FfFBvgvOsglS86_LIp1ahIUHGwHOjn38UKyhbS26v-z_Fzpw35xIQvPIh6d4VBevWp7r87Ac2RHXo&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
+
+  <script>
+  // Render PayPal Hosted Buttons
+  const buttons = {"HOSTED_ID_MOON": "HOSTED_ID_MOON", "HOSTED_ID_HODL": "HOSTED_ID_HODL", "HOSTED_ID_JERK": "HOSTED_ID_JERK", "HOSTED_ID_DECENT": "HOSTED_ID_DECENT", "HOSTED_ID_ISO": "HOSTED_ID_ISO", "HOSTED_ID_LOCK": "HOSTED_ID_LOCK", "HOSTED_ID_KEYS": "HOSTED_ID_KEYS"};
+  Object.keys(buttons).forEach(id=>{
+      paypal.HostedButtons({ hostedButtonId: buttons[id] }).render('#'+id);
+  });
+  </script>
 </body>
 </html>
