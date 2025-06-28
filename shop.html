@@ -1,1 +1,66 @@
-<html><head><title>shop.html</title></head><body>Shop Page Content</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - Jerk Threads</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.paypal.com/sdk/js?client-id=BAAz3FfFBvgvOsglS86_LIp1ahIUHGwHOjn38UKyhbS26v-z_Fzpw35xIQvPIh6d4VBevWp7r87Ac2RHXo&components=hosted-buttons&currency=USD"></script>
+</head>
+<body>
+  <nav><a href="index.html">🏠 Home</a> | <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=jerkthreads@gmail.com&display=1">🛒 View Cart</a></nav>
+  <section class="shop-grid">
+    <div class="card">
+      <img src="assets/moon_coming_soon.png" alt="Moon Coming Soon">
+      <h3>Moon Coming Soon</h3>
+      <p>$29.99</p>
+      <div id="paypal-container-XY3M4FCYLV7NA"></div>
+    </div>
+    <div class="card">
+      <img src="assets/keep_calm_hodl_xrp.png" alt="Keep Calm HODL XRP">
+      <h3>Keep Calm HODL XRP</h3>
+      <p>$29.99</p>
+      <div id="paypal-container-84J4YDMSCE99N"></div>
+    </div>
+    <div class="card">
+      <img src="assets/certified_jerk.png" alt="Certified Jerk">
+      <h3>Certified Jerk</h3>
+      <p>$29.99</p>
+      <div id="paypal-container-7D7DLA5K4WFDS"></div>
+    </div>
+    <div class="card">
+      <img src="assets/iso-gang.png" alt="ISO Gang">
+      <h3>ISO Gang</h3>
+      <p>$29.99</p>
+      <div id="paypal-container-ABEHEZJVVPWEL"></div>
+    </div>
+    <div class="card">
+      <img src="assets/lock_it_in.png" alt="Don't Let This Be You">
+      <h3>Don’t Let This Be You</h3>
+      <p>$29.99</p>
+      <div id="paypal-container-GEKL8EG8NKFCA"></div>
+    </div>
+    <div class="card">
+      <img src="assets/keys.png" alt="Not Your Keys">
+      <h3>Not Your Keys, Not Your Coins</h3>
+      <p>$29.99</p>
+      <div id="paypal-container-X6WV8ADVQKUYW"></div>
+    </div>
+    <div class="card">
+      <img src="assets/naughty_cats.png" alt="Naughty Cats">
+      <h3>Naughty Cats</h3>
+      <p>$29.99</p>
+      <div id="paypal-container-FNMP423SWY5CN"></div>
+    </div>
+  </section>
+  <script>
+    paypal.HostedButtons({ hostedButtonId: "XY3M4FCYLV7NA" }).render("#paypal-container-XY3M4FCYLV7NA");
+    paypal.HostedButtons({ hostedButtonId: "84J4YDMSCE99N" }).render("#paypal-container-84J4YDMSCE99N");
+    paypal.HostedButtons({ hostedButtonId: "7D7DLA5K4WFDS" }).render("#paypal-container-7D7DLA5K4WFDS");
+    paypal.HostedButtons({ hostedButtonId: "ABEHEZJVVPWEL" }).render("#paypal-container-ABEHEZJVVPWEL");
+    paypal.HostedButtons({ hostedButtonId: "GEKL8EG8NKFCA" }).render("#paypal-container-GEKL8EG8NKFCA");
+    paypal.HostedButtons({ hostedButtonId: "X6WV8ADVQKUYW" }).render("#paypal-container-X6WV8ADVQKUYW");
+    paypal.HostedButtons({ hostedButtonId: "FNMP423SWY5CN" }).render("#paypal-container-FNMP423SWY5CN");
+  </script>
+</body>
+</html>
