@@ -9,29 +9,26 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-            text-align: center;
+            background: #000;
+            color: white;
         }
         .hero {
+            background: url('homepage.png') no-repeat center center;
+            background-size: cover;
             width: 100%;
-            max-width: 1140px;
-            margin: 0 auto;
-        }
-        .hero img {
-            width: 100%;
-            height: auto;
+            height: 600px;
         }
         footer {
             background-color: #111;
-            color: #ccc;
-            padding: 20px 0;
-            font-size: 14px;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
         }
         footer a {
-            color: #fcd34d;
-            margin: 0 10px;
+            color: #ffcc00;
+            margin: 0 15px;
             text-decoration: none;
+            font-weight: bold;
         }
         footer a:hover {
             text-decoration: underline;
@@ -39,15 +36,14 @@
     </style>
 </head>
 <body>
-    <div class="hero">
-        <img src="home-image.png" alt="Hero Image">
-    </div>
+    <div class="hero"></div>
     <footer>
-        <p>Contact us: 
-            <a href="https://twitter.com/jerkthreads" target="_blank">@jerkthreads (X)</a> | 
-            <a href="https://instagram.com/jerkthreads" target="_blank">@jerkthreads (IG)</a> | 
-            <a href="mailto:jerkthreads@gmail.com">jerkthreads@gmail.com</a>
-        </p>
+        <a href="about.html">About Us</a>
+        <a href="shop.html">Shop Now</a>
+        <a href="mailto:jerkthreads@gmail.com">Contact Us</a>
+        <div style="margin-top: 10px;">
+            <span>@jerkthreads on X & IG</span>
+        </div>
     </footer>
 </body>
 </html>
