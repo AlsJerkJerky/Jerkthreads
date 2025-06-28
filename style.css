@@ -1,27 +1,21 @@
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-.hero-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 1em 0;
-}
-.footer a {
-  color: gold;
-  text-decoration: none;
-  margin: 0 0.5em;
-}
-.about-content {
-  padding: 2em;
-  max-width: 800px;
-  margin: auto;
-}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+body.home{background:#000;color:#fff;text-align:center}
+body.about{background:#0d0d0d;color:#fff;background:radial-gradient(circle at top right,#1a1a1a 0%,#000 70%);}
+body.shop{background:#000;color:#fff}
+.hero{position:relative;height:100vh;overflow:hidden}
+.hero-img{width:100%;height:100%;object-fit:contain}
+.shop-btn{position:absolute;bottom:40px;right:5%;padding:15px 30px;background:#f5c400;color:#000;font-weight:700;border-radius:10px;text-decoration:none}
+.footer{background:#111;color:#fff;text-align:center;padding:15px}
+.footer a{color:#f5c400;text-decoration:none;margin:0 4px}
+.top-nav{display:flex;justify-content:space-between;padding:20px;background:#111}
+.top-nav a{color:#f5c400;text-decoration:none;font-size:18px}
+.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:30px;padding:30px}
+.card{width:260px;background:#111;border-radius:12px;padding:20px;transition:transform .2s}
+.card:hover{transform:translateY(-5px) scale(1.05)}
+.card img{width:100%;height:auto;border-radius:8px}
+.price{color:#f5c400;margin:10px 0;font-weight:700}
+.about-section{max-width:800px;margin:60px auto;padding:0 20px;line-height:1.6}
+.about-section h1{margin-bottom:20px}
+.about-section h2{margin-top:30px}
+.about-section blockquote{background:#111;padding:15px;border-left:4px solid #f5c400;margin:20px 0}
